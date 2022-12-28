@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilais",
+  "info": {
+    "singularName": "nilai",
+    "pluralName": "nilais",
+    "displayName": "nilai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sks": {
+      "type": "integer"
+    },
+    "semester": {
+      "type": "integer"
+    },
+    "nilai": {
+      "type": "string"
+    },
+    "mahasiswa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mahasiswa.mahasiswa",
+      "inversedBy": "nilais"
+    },
+    "matakuliah": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::matakuliah.matakuliah",
+      "inversedBy": "nilais"
+    }
+  }
+}

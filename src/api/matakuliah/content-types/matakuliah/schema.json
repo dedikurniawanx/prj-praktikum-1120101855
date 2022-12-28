@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matakuliahs",
+  "info": {
+    "singularName": "matakuliah",
+    "pluralName": "matakuliahs",
+    "displayName": "matakuliah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kdmk": {
+      "type": "string",
+      "required": true
+    },
+    "matakuliah": {
+      "type": "string",
+      "required": true
+    },
+    "sks": {
+      "type": "integer",
+      "required": true
+    },
+    "semester": {
+      "type": "integer",
+      "required": true
+    },
+    "nilais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "matakuliah"
+    }
+  }
+}

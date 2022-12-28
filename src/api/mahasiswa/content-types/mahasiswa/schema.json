@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mahasiswas",
+  "info": {
+    "singularName": "mahasiswa",
+    "pluralName": "mahasiswas",
+    "displayName": "mahasiswa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "nim": {
+      "type": "string",
+      "required": true
+    },
+    "angkatan": {
+      "type": "string"
+    },
+    "prodi": {
+      "type": "string",
+      "required": true
+    },
+    "nilais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "mahasiswa"
+    }
+  }
+}
